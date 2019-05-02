@@ -181,6 +181,9 @@ const NSString* TAG = @"AudioPlayer";
     }
     
     [_audioPlayer play];
+    BOOL sucess = [[AVAudioSession sharedInstance]
+                    setCategory:AVAudioSessionCategoryPlayback
+                  error:nil];
   }
 }
 
